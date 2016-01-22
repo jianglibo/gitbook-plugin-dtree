@@ -1,0 +1,38 @@
+{
+  "name": "gitbook-plugin-asciitree",
+  "version": "1.0.0",
+  "engines": {
+    "gitbook": ">=2.5.0"
+  },
+  "gitbook": {
+    "properties": {
+      "leadingChar": {
+        "type": "string",
+        "default": "-",
+        "description": "indention character."
+      }
+    }
+  },
+  "description": "gitbook plugin for convert indented lines to an ascii directory tree",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jianglibo/gitbook-plugin-dtree.git"
+  },
+  "keywords": [
+    "gitbook",
+    "plugin"
+  ],
+  "author": "jianglibo <jianglibo@gmail.com> (http://www.m3958.com/)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jianglibo/gitbook-plugin-dtree/issues"
+  },
+  "homepage": "https://github.com/jianglibo/gitbook-plugin-dtree#readme",
+  "dependencies": {
+    "my-ascii-tree": "^1.0.0"
+  }
+}
