@@ -8,7 +8,7 @@ describe('GitBook', function() {
     it('should not null', function() {
       assert(gitbook.blocks.asciitree.process, "not null");
       var newBlock = gitbook.blocks.asciitree.process({body: "hello"});
-      assert.equal("```\n└── hello\n```", newBlock);
+      assert.deepEqual({body: "```\n└── hello\n```", parse: true}, newBlock);
     });
   });
 });
