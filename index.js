@@ -1,4 +1,4 @@
-var katex = require("my-ascii-tree");
+var DtreeConverter = require("my-ascii-tree");
 
 module.exports = {
     blocks: {
@@ -6,7 +6,8 @@ module.exports = {
             process: function(block) {
               var body = block.body || "";
               var lines = body.split("\n");
-              var convertedLines = new DtreeConverter(lines, "-").convert() || [];
+              console.log(this);
+              var convertedLines = new DtreeConverter(lines).convert() || [];
               return convertedLines.join("\n");
             }
         }
