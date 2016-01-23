@@ -1,4 +1,4 @@
-var DtreeConverter = require("my-ascii-tree");
+var asciitree = require("my-ascii-tree");
 
 module.exports = {
   blocks: {
@@ -15,7 +15,7 @@ module.exports = {
         if (this.getConfig) {
           console.log(this.getConfig());
         }
-        var convertedLines = new DtreeConverter(lines).convert() || [];
+        var convertedLines = new asciitree.AsciiTree(lines).convert() || [];
         // if surrounded by ```, block will not be processed.
         convertedLines.unshift("```");
         convertedLines.push("```");
