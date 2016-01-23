@@ -11,7 +11,10 @@ module.exports = {
       process: function(block) {
         var body = block.body || "";
         var lines = body.split("\n");
-        console.log(this); // this will printed in gitbook console.
+        console.log(this.ctx); // this will printed in gitbook console.
+        console.log(this.ctx && this.ctx.config); // this will printed in gitbook console.
+        console.log(this.ctx && this.ctx.config && this.ctx.config.pluginsConfig); // this will printed in gitbook console.
+        console.log(this.book); // this will printed in gitbook console.
         // if (this.getConfig) {
         //   console.log(this.getConfig());
         // }
