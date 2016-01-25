@@ -1,6 +1,9 @@
 # ascii directory tree plugin for GitBook
 
 convert indented lines to ascii directory tree for gitbook.
+
+you can see asciitree in action. [https://jianglibo.gitbooks.io](https://jianglibo.gitbooks.io/broccoli-learning/content/gitbook/BREADME.html)
+
 in:
 ```
 app
