@@ -1,6 +1,6 @@
 {
   "name": "gitbook-plugin-asciitree",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "engines": {
     "gitbook": ">=2.5.0"
   },
@@ -20,7 +20,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jianglibo/gitbook-plugin-dtree.git"
+    "url": "git+https://github.com/jianglibo/gitbook-plugin-asciitree.git"
   },
   "keywords": [
     "gitbook",
@@ -29,11 +29,11 @@
   "author": "jianglibo <jianglibo@gmail.com> (http://www.m3958.com/)",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/jianglibo/gitbook-plugin-dtree/issues"
+    "url": "https://github.com/jianglibo/gitbook-plugin-asciitree/issues"
   },
-  "homepage": "https://github.com/jianglibo/gitbook-plugin-dtree#readme",
+  "homepage": "https://github.com/jianglibo/gitbook-plugin-asciitree#readme",
   "dependencies": {
-    "my-ascii-tree": "^1.0.3"
+    "my-ascii-tree": "^1.0.11"
   },
   "devDependencies": {
     "mocha": "^2.3.4"
