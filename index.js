@@ -20,7 +20,9 @@ module.exports = {
         //   console.log(this.getConfig());
         // }
         var tree = new asciitree.AsciiTree(asciitree.BytesLine.getArray(body)).convert();
-        var convertedLines = tree.toStringArray();
+        var convertedLines = tree.toStringArray().map(function (line) {
+          return line.trimRight();
+        });
         // if surrounded by ```, block will not be processed.
         convertedLines.unshift("```");
         convertedLines.push("```");
