@@ -6,12 +6,14 @@ you can see asciitree in action. [https://jianglibo.gitbooks.io](https://jiangli
 
 in:
 ```
+{% asciitree %}
 app
 -main.js
 -helper.js
 -others
 --Brocfile.js
 package.json
+{% endasciitree %}
 ```
 
 out:
