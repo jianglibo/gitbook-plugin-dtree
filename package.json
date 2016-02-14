@@ -1,6 +1,6 @@
 {
   "name": "gitbook-plugin-asciitree",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "engines": {
     "gitbook": ">=2.5.0"
   },
@@ -38,7 +38,7 @@
   },
   "homepage": "https://github.com/jianglibo/gitbook-plugin-asciitree#readme",
   "dependencies": {
-    "my-ascii-tree": "^1.0.11"
+    "my-ascii-tree": "^1.0.14"
   },
   "devDependencies": {
     "mocha": "^2.3.4"

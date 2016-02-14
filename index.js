@@ -1,5 +1,6 @@
 var asciitree = require("my-ascii-tree");
-var os = require('os');
+var BytesLine = asciitree.BytesLine;
+var AsciiTree = asciitree.AsciiTree;
 
 module.exports = {
   blocks: {
@@ -11,14 +12,22 @@ module.exports = {
       // },
       process: function(block) {
         var body = block.body || "";
-        var asciitreeConfig = this.book.config.get('pluginsConfig.asciitree');
-        var tree = new asciitree.AsciiTree(asciitree.BytesLine.getArray(body)).convert();
-        var convertedLines = tree.toStringArray();
+        var asciitreeConfig = {};
+
+        if (this.book) {
+          asciitreeConfig = this.book.config.get('pluginsConfig.asciitree');
+        }
+
+        var tree = new AsciiTree(BytesLine.getArray(body)).prepend("```").append("```").convert();
+
+        var convertedLines = tree.toStringArray() || [];
+
+        var result = convertedLines.reduce(function(prev, cur){
+          return prev + cur;
+        }, "");
         // because parse is true, ``` should be treat as markdown tag.
-        convertedLines.unshift("```");
-        convertedLines.push("```");
         return {
-          body: convertedLines.join(os.EOL),
+          body: result,
           parse: true
         };
       }
