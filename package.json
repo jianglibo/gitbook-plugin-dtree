@@ -10,6 +10,11 @@
         "type": "string",
         "default": "-",
         "description": "indention character."
+      },
+      "trimRight": {
+        "type": "boolean",
+        "default": false,
+        "description": "trimRight"
       }
     }
   },

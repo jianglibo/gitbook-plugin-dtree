@@ -11,17 +11,10 @@ module.exports = {
       // },
       process: function(block) {
         var body = block.body || "";
-        // var lines = body.split("\n");
-        // console.log(this.ctx); // this will printed in gitbook console.
-        // console.log(this.ctx && this.ctx.config); // this will printed in gitbook console.
-        // console.log(this.ctx && this.ctx.config && this.ctx.config.pluginsConfig); // this will printed in gitbook console.
-        // console.log(this.book); // this will printed in gitbook console.
-        // if (this.getConfig) {
-        //   console.log(this.getConfig());
-        // }
+        var asciitreeConfig = this.book.config.get('pluginsConfig.asciitree');
         var tree = new asciitree.AsciiTree(asciitree.BytesLine.getArray(body)).convert();
         var convertedLines = tree.toStringArray();
-        // if surrounded by ```, block will not be processed.
+        // because parse is true, ``` should be treat as markdown tag.
         convertedLines.unshift("```");
         convertedLines.push("```");
         return {

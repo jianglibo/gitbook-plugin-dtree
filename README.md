@@ -30,7 +30,8 @@ Add it to your book.json with a basic configuration:
     "plugins": ["asciitree"],
     "pluginsConfig": {
         "asciitree": {
-            "leadingChar": "no need, because plugin will guess leadingChar."
+            "leadingChar": "no need, because plugin will guess leadingChar.",
+            "trimRight": true
         }
     }
 }
